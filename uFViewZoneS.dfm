@@ -1,0 +1,274 @@
+object FViewZoneS: TFViewZoneS
+  Left = 0
+  Top = 0
+  Caption = 'FViewZoneS'
+  ClientHeight = 386
+  ClientWidth = 541
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDefault
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnKeyDown = FormKeyDown
+  OnKeyPress = FormKeyPress
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Chart1: TChart
+    Left = 0
+    Top = 0
+    Width = 541
+    Height = 386
+    BackWall.Color = clGray
+    BackWall.Transparency = 30
+    BackWall.Transparent = False
+    BottomWall.Visible = False
+    LeftWall.Visible = False
+    Legend.Visible = False
+    MarginBottom = 18
+    MarginLeft = 0
+    MarginRight = 2
+    MarginTop = 7
+    MarginUnits = muPixels
+    Title.Text.Strings = (
+      'TChart')
+    Title.Visible = False
+    OnClickBackground = Chart1ClickBackground
+    LeftAxis.Automatic = False
+    LeftAxis.AutomaticMaximum = False
+    LeftAxis.AutomaticMinimum = False
+    LeftAxis.Maximum = 100.000000000000000000
+    LeftAxis.Minimum = -100.000000000000000000
+    View3D = False
+    Align = alClient
+    TabOrder = 0
+    DefaultCanvas = 'TGDIPlusCanvas'
+    ColorPaletteIndex = 13
+    object SBSource: TSpeedButton
+      Left = 37
+      Top = 8
+      Width = 17
+      Height = 17
+      Hint = #1048#1089#1093#1086#1076#1085#1099#1077' '#1076#1072#1085#1085#1099#1077
+      AllowAllUp = True
+      GroupIndex = 1
+      Caption = #1048
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = SBSourceClick
+    end
+    object SBMedian: TSpeedButton
+      Left = 60
+      Top = 8
+      Width = 17
+      Height = 17
+      Hint = #1052#1077#1076#1080#1072#1085#1085#1072#1103' '#1092#1080#1083#1100#1090#1088#1072#1094#1080#1103
+      AllowAllUp = True
+      GroupIndex = 2
+      Caption = #1052
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = SBMedianClick
+    end
+    object SBFilterOut: TSpeedButton
+      Left = 83
+      Top = 8
+      Width = 17
+      Height = 17
+      Hint = #1063#1072#1089#1090#1086#1090#1085#1072#1103' '#1092#1080#1083#1100#1090#1088#1072#1094#1080#1103' '#1074#1085#1077#1096#1085#1103#1103
+      AllowAllUp = True
+      GroupIndex = 3
+      Caption = #1060
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = SBFilterOutClick
+    end
+    object SBFilterIn: TSpeedButton
+      Left = 106
+      Top = 8
+      Width = 17
+      Height = 17
+      Hint = #1063#1072#1089#1090#1086#1090#1085#1072#1103' '#1092#1080#1083#1100#1090#1088#1072#1094#1080#1103' '#1074#1085#1091#1090#1088#1077#1085#1085#1103#1103' '
+      AllowAllUp = True
+      GroupIndex = 4
+      Caption = #1092
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      OnClick = SBFilterInClick
+    end
+    object StatusBar1: TStatusBar
+      Left = 1
+      Top = 366
+      Width = 539
+      Height = 19
+      Panels = <
+        item
+          Text = #1056#1072#1089#1089#1090#1086#1103#1085#1080#1077':'
+          Width = 50
+        end>
+    end
+    object Series1: TLineSeries
+      SeriesColor = clGreen
+      Title = 'Source'
+      Brush.BackColor = clDefault
+      Dark3D = False
+      LinePen.Color = clGreen
+      Pointer.Brush.Gradient.EndColor = clGreen
+      Pointer.Gradient.EndColor = clGreen
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object Series2: TLineSeries
+      SeriesColor = clYellow
+      Title = 'Median'
+      Brush.BackColor = clDefault
+      Dark3D = False
+      LinePen.Color = clYellow
+      LinePen.EndStyle = esFlat
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object Series3: TLineSeries
+      SeriesColor = clBlue
+      Title = 'FilterOut'
+      Brush.BackColor = clDefault
+      Dark3D = False
+      LinePen.Color = clBlue
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object Series4: TLineSeries
+      SeriesColor = 8388672
+      Title = 'FilterIn'
+      Brush.BackColor = clDefault
+      Dark3D = False
+      LinePen.Color = 8388672
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object Out10: TLineSeries
+      Brush.BackColor = clDefault
+      LinePen.Color = 10708548
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object Out11: TLineSeries
+      Brush.BackColor = clDefault
+      LinePen.Color = 3513587
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object Out20: TLineSeries
+      Brush.BackColor = clDefault
+      LinePen.Color = 1330417
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object Out21: TLineSeries
+      Brush.BackColor = clDefault
+      LinePen.Color = 11048782
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object In10: TLineSeries
+      Brush.BackColor = clDefault
+      LinePen.Color = 7028779
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object In11: TLineSeries
+      Brush.BackColor = clDefault
+      LinePen.Color = 6519581
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object In20: TLineSeries
+      Brush.BackColor = clDefault
+      LinePen.Color = 919731
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+    object In21: TLineSeries
+      Brush.BackColor = clDefault
+      LinePen.Color = 6144242
+      Pointer.InflateMargins = True
+      Pointer.Style = psRectangle
+      XValues.Name = 'X'
+      XValues.Order = loAscending
+      YValues.Name = 'Y'
+      YValues.Order = loNone
+    end
+  end
+end
