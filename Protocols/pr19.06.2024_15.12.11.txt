@@ -1,6 +1,0 @@
-Открыли протокол: ..\..\Protocols\pr19.06.2024_15.12.11.txt
-Main: Начали
-Bank: === CLEAR ===
-Main: LoadSettings
-Bank: === CLEAR ===
-Main: ClearCharts()
